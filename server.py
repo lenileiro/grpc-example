@@ -10,6 +10,8 @@ class Greeter(hello_pb2_grpc.GreeterServicer):
 
     def SayHello(self, request, context):
         print('Send: Hello, %s!' % request.name)
+        if request.name == "end":
+            Server.serve(1)
         return hello_pb2.HelloReply(message='Hello, %s!' % request.name)
 
 class Server:
@@ -34,7 +36,9 @@ class Server:
         return credentials
     
     @staticmethod
-    def serve():
+    def serve(end=''):
+        if end == 1:
+            return
         server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))
         hello_pb2_grpc.add_GreeterServicer_to_server(Greeter(), server)
         
@@ -44,12 +48,10 @@ class Server:
         server.start()
         try:
             while True:
-                time.sleep(10)
+                time.sleep(1)
         except KeyboardInterrupt:
             server.stop(0)
 
-    def end():
-        raise KeyboardInterrupt
 
 
 if __name__ == '__main__':

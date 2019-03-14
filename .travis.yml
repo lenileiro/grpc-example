@@ -10,7 +10,6 @@ before_script:
   - pip install codecov
 
 script:
-  - python server.py
   - coverage run --source=test -m pytest && coverage report
 
 after_success:
