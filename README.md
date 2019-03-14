@@ -1,23 +1,20 @@
 
-# Setup
+
+# Python Dependance
+
+    ``bash
+        virtualenv -p python3 venv
+        pip install grpcio-tools && pip install grpcio
+    ```
 
 ## generate keys
 
     ``bash
         ./generateCerts.sh
     ```
-
-## Node JS
-
-    ``bash
-        npm init -y
-        npm install @grpc/proto-loader
-        npm install grpc
-    ```
-
-## Python 
+## generate python proto functions
 
     ``bash
-        virtualenv -p python3 venv
-        pip install grpcio-tools && grpcio
+        python genproto.py
     ```
+## run application
