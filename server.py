@@ -50,5 +50,6 @@ class Server:
 
 
 if __name__ == '__main__':
+    print("server has started")
     logging.basicConfig()
     Server.serve()

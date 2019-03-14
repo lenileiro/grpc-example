@@ -1,8 +1,7 @@
-#keys folder
-rm keys
+rm -rf keys
+rm -rf ./nodeclientexample/keys
 mkdir keys
 cd keys
-
 @echo off
 set OPENSSL_CONF=/System/Library/OpenSSL/openssl.cnf 
 
@@ -35,3 +34,7 @@ openssl x509 -passin pass:1111 -req -days 365 -in client.csr -CA ca.crt -CAkey c
 
 echo Remove passphrase from client key:
 openssl rsa -passin pass:1111 -in client.key -out client.key
+
+cd ..
+
+cp -R keys/ ./nodeclientexample/

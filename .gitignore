@@ -3,3 +3,5 @@ keys/
 .vscode
 .pytest_cache/
 .benchmarks/
+node_modules
+*.pyc
