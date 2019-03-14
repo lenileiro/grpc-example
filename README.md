@@ -18,3 +18,13 @@
         python genproto.py
     ```
 ## run application
+
+    ``bash
+        python server.py
+    ```
+
+## test application
+
+    ``bash
+        python -m pytest
+    ```

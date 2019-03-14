@@ -1,3 +1,5 @@
 venv
 keys/
 .vscode
+.pytest_cache/
+.benchmarks/
