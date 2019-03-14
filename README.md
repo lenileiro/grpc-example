@@ -26,5 +26,5 @@
 ## test application
 
     ``bash
-        python -m pytest
+        coverage run --source=test -m pytest && coverage report
     ```

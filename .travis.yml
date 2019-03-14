@@ -1,0 +1,17 @@
+language: python
+python:
+  - "3.6"
+
+services:
+  - docker
+
+before_script: 
+  - pip install docker-compose
+  - pip install codecov
+
+script:
+  - python server.py
+  - coverage run --source=test -m pytest && coverage report
+
+after_success:
+- coveralls

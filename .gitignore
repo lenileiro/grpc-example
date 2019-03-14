@@ -5,3 +5,4 @@ keys/
 .benchmarks/
 node_modules
 *.pyc
+.coverage

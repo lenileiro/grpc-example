@@ -48,6 +48,9 @@ class Server:
         except KeyboardInterrupt:
             server.stop(0)
 
+    def end():
+        raise KeyboardInterrupt
+
 
 if __name__ == '__main__':
     print("server has started")
