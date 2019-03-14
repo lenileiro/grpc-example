@@ -1,6 +1,6 @@
 
 
-# Python Dependance
+# Python Dependence
 
     ``bash
         virtualenv -p python3 venv
