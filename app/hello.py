@@ -10,9 +10,10 @@ class Greeter(hello_pb2_grpc.GreeterServicer):
 
         self.error_handers(request, context)
         self.auth_handers(request, context)
+        
 
         token = Token.generate_token(name=request.name)
-        
+
         #docs https://github.com/grpc/grpc/blob/master/doc/statuscodes.md
         return hello_pb2.HelloReply(
             message='Hello, %s!' % request.name,
