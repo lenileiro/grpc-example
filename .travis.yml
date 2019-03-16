@@ -8,6 +8,7 @@ services:
 before_script: 
   - pip install docker-compose
   - pip install codecov
+  - python server.py &
 
 script:
   - coverage run --source=test -m pytest && coverage report
