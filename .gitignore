@@ -6,4 +6,5 @@ keys/
 node_modules
 *.pyc
 .coverage
-hello_pb.py
+hello_pb2_grpc.py
+hello_pb2.py
