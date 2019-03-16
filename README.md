@@ -11,7 +11,7 @@
 ## generate keys
 
     ``bash
-        ./generateCerts.sh
+        bash generateCerts.sh
     ```
 ## generate python proto functions
 
@@ -21,7 +21,7 @@
 ## run application
 
     ``bash
-        python server.py
+        python server.py &
     ```
 
 ## test application
