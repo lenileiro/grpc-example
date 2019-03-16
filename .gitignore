@@ -3,7 +3,7 @@ venv
 keys/
 .pytest_cache/
 .benchmarks/
-node_modules
+node_modules/
 *.pyc
 .coverage
 hello_pb2_grpc.py

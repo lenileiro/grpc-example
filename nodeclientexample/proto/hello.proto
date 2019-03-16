@@ -5,9 +5,9 @@ package helloworld;
 // The greeting service definition.
 service Greeter {
   // Sends a greeting
-  rpc join(stream HelloRequest) returns (stream HelloRequest){}
   rpc SayHello (HelloRequest) returns (HelloReply);
 }
+
 
 // The request message containing the user's name.
 message HelloRequest {
@@ -17,4 +17,5 @@ message HelloRequest {
 // The response message containing the greetings
 message HelloReply {
   string message = 1;
+  string token = 2;
 }

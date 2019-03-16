@@ -2,7 +2,7 @@ let grpc = require("grpc");
 var grpc_promise = require('grpc-promise')
 var client = require('./credentials')
 
-function fetch(name) {
+async function fetch(name) {
     const meta = new grpc.Metadata();
     meta.add('key', 'value');
 
@@ -17,5 +17,5 @@ function fetch(name) {
 response = fetch("sam")
 
 response.then(data => {
-    console.log('Client:', data.message)
+    console.log('Client:', data)
 })
