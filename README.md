@@ -1,4 +1,5 @@
-
+[![Build Status](https://travis-ci.org/lenileiro/grpc-example.svg?branch=develop)](https://travis-ci.org/lenileiro/grpc-example)
+[![Coverage Status](https://coveralls.io/repos/github/lenileiro/grpc/badge.svg?branch=develop)](https://coveralls.io/github/lenileiro/grpc?branch=develop)
 
 # Installation
 
