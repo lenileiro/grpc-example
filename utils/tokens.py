@@ -28,11 +28,11 @@ class Token:
 
     @staticmethod
     def private_secret_key():
-        GoogPubKey = os.getenv("PRIVATE_KEY")     
-        GoogPubKey = GoogPubKey.replace('-', '+')
-        GoogPubKey = GoogPubKey.replace('_', '/')
-        len(GoogPubKey) % 4  # 0
-        secret_key = '-----BEGIN PRIVATE KEY-----\n' + GoogPubKey + '\n-----END PRIVATE KEY-----'
+        GoogPrivKey = os.getenv("PRIVATE_KEY")     
+        GoogPrivKey = GoogPrivKey.replace('-', '+')
+        GoogPrivKey = GoogPrivKey.replace('_', '/')
+        len(GoogPrivKey) % 4  # 0
+        secret_key = '-----BEGIN PRIVATE KEY-----\n' + GoogPrivKey + '\n-----END PRIVATE KEY-----'
         return secret_key
     
     @staticmethod
