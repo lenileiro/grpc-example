@@ -8,12 +8,14 @@ function fetch(name) {
 
     grpc_promise.promisifyAll(client, { metadata: meta, timeout: 1000 }); // timeout in milliseconds
     
-    return client.SayHello()
+    var response = client.SayHello()
     .sendMessage({name: name})
+
+    return response
 }
 
+response = fetch("sam")
 
-fetch("sam").then(res => {
-    console.log('Client:', res.message) // Client:Message Received
+response.then(data => {
+    console.log('Client:', data.message)
 })
-.catch(err => console.error(err))
