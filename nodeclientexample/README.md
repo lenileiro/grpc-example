@@ -2,5 +2,5 @@
 
     ``bash
         npm install 
-        npm client.js "name"
+        npm run.js
     ```
