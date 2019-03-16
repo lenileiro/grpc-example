@@ -5,7 +5,7 @@ from credentials.client import Credentials
 
 def run():
     credentials = Credentials.get_credentials()
-    channel = grpc.secure_channel('localhost:50051', credentials)
+    channel = grpc.secure_channel('localhost:50052', credentials)
     stub = hello_pb2_grpc.GreeterStub(channel)
 
     return stub
