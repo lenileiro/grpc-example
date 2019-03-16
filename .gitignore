@@ -6,3 +6,4 @@ keys/
 node_modules
 *.pyc
 .coverage
+hello_pb.py
