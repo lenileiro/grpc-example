@@ -18,7 +18,7 @@ const cert = fs.readFileSync('keys/client.crt');
 const key = fs.readFileSync('keys/client.key');
 
 let credentials = grpc.credentials.createSsl(cacert,key, cert);
-let service = new proto.helloworld.Greeter('localhost:50051', credentials);
+let client = new proto.helloworld.Greeter('localhost:50051', credentials);
 
 // return proto Greeter service from proto with its methods
-module.exports = service
+module.exports = client
