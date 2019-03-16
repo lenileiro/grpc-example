@@ -8,6 +8,8 @@ services:
 before_script: 
   - pip install docker-compose
   - pip install codecov
+  - bash generateCerts.sh
+  - python genproto.py
   - python server.py &
 
 script:

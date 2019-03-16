@@ -1,5 +1,6 @@
 venv
 .vscode
+keys/
 .pytest_cache/
 .benchmarks/
 node_modules
