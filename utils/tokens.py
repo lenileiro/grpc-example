@@ -7,7 +7,7 @@ class Token:
     @staticmethod
     def generate_token(**kwargs):
         payload = {
-                'exp': datetime.utcnow()+ timedelta(minutes=1),
+                'exp': datetime.utcnow()+ timedelta(minutes=30),
                 'iat': datetime.utcnow()}
 
         for key, val in kwargs.items():

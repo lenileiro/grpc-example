@@ -4,7 +4,7 @@ var client = require('./credentials')
 
 async function fetch(name) {
     const meta = new grpc.Metadata();
-    meta.add('key', 'value');
+    meta.add('token', 'valuse');
 
     grpc_promise.promisifyAll(client, { metadata: meta, timeout: 1000 }); // timeout in milliseconds
     
@@ -18,4 +18,8 @@ response = fetch("sam")
 
 response.then(data => {
     console.log('Client:', data)
+
+}).catch(err => {
+    console.error(err)
+    // console.log(err.status) /details
 })

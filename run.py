@@ -16,7 +16,7 @@ def run():
     
     server_credentials = Credentials.get_credentials()
     
-    server.add_secure_port('localhost:50051', server_credentials)
+    server.add_secure_port('localhost:50052', server_credentials)
     server.start()
     try:
         while True:
